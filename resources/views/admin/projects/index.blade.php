@@ -30,7 +30,7 @@
                                 <th >{{$project->stack}}</th>
                                 <th>
                                     <div class="d-flex">
-                                        <a class="btn btn-primary btn-sm me-1" href="#">View</a>
+                                        <a class="btn btn-primary btn-sm me-1" href="{{route('admin.projects.show' , $project)}}">View</a>
                                         <a class="btn btn-warning btn-sm me-1" href="#">Edit</a>
                                     </div>
                                 </th>

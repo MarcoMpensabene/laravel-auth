@@ -10,9 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
-                <a class="nav-link " href="#" role="button">
+                <a class="nav-link " href="/" role="button">
                     Homepage
                 </a>
+                <a class="nav-link "  role="button" href="{{route('admin.projects.index')}}">ProjectList</a>
             </ul>
 
             <!-- Right Side Of Navbar -->
