@@ -21,27 +21,14 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-Step for creating this template in laravel 10 :
-
-    Create a new Laravel 10.x project composer create-project laravel/laravel:^10 your-project-name*
-    Install the needed package composer require laravel/ui
-    Apply the new auth scaffolding using bootstrap and laravel/ui: php artisan ui bootstrap --auth
-    Run npm i and
-    Configure correctly the .env file
-    Run php artisan migrate
-    Run on two separeted terminals:
-        run npm run dev to build iteratively our front-end packages and code
-        run php artisan serve to build iteratively our back-end packages and code
-    Start changing the world with your oustanding code!
-
-Step for using the template : 
-
-
-    Copy and paste the .env.example file and rename it into .env without removing the env.example file
-    Run composer install to install all our composer packages
-    Run php artisan key:generate to generate our custom application key
-    Run npm i to install all our npm packages
-    Run on two separeted terminals:
-        run npm run dev to build iteratively our front-end packages and code
-        run php artisan serve to build iteratively our back-end packages and code
-    Start changing the world with your oustanding code!
+Esercizio di oggi: Laravel Boolfolio - Base
+nome repo: laravel-auth
+Ciao ragazze e ragazzi, creiamo con Laravel il nostro sistema di gestione del nostro Portfolio di progetti.
+Oggi iniziamo un nuovo progetto che si arricchirà nel corso delle prossime lezioni: man mano aggiungeremo funzionalità e vedremo la nostra applicazione crescere ed evolvere.
+Nel pomeriggio, rifate ciò che abbiamo visto insieme stamattina stilando tutto a vostro piacere utilizzando SASS.Descrizione:
+Ripercorriamo gli steps fatti a lezione ed iniziamo un nuovo progetto usando i comandi visti insieme a lezione.Iniziamo con il definire il layout, modello, migrazione, controller e rotte necessarie per il sistema portfolio:
+1.  Autenticazione: si parte con l'autenticazione e la creazione di un layout per back-office
+2.  Creazione del modello Project con relativa migrazione, seeder, controller e rotte
+3.  Per la parte di back-office creiamo un resource controller Admin\ProjectController per gestire tutte le operazioni CRUD dei progettiImplementiamo le funzionalita' di index(), show(), create(), store() per il modello Project.
+Bonus
+Implementiamo la validazione dei dati dei Progetti nelle operazioni CRUD che lo richiedono usando una form request.:fiestaparrot: :fiestaparrot: Buon lavoro a tutte e a tutti :fiestaparrot: :fiestaparrot:
