@@ -13,7 +13,18 @@
                 <a class="nav-link " href="/" role="button">
                     Homepage
                 </a>
-                <a class="nav-link "  role="button" href="{{route('admin.projects.index')}}">ProjectList</a>
+                @if (Route::has('admin.projects.index'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.projects.index') }}">{{ __('ProjectsList') }}</a>
+                </li>
+                @endif
+
+                @if (Route::has('admin.projects.create'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.projects.create') }}">{{ __('Add new Project') }}</a>
+                        </li>
+                @endif
+
             </ul>
 
             <!-- Right Side Of Navbar -->

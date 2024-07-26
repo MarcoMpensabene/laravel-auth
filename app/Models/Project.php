@@ -10,4 +10,11 @@ class Project extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'name',
+        'description',
+        'author',
+        'image_url',
+        'stack'
+    ];
 }
