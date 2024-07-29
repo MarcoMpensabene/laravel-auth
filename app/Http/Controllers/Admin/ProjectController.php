@@ -11,7 +11,7 @@ class ProjectController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Project $project)
     {
         $projects = Project::all();
         return view('admin.projects.index', compact('projects'));
@@ -20,7 +20,7 @@ class ProjectController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Project $project)
     {
         return view('admin.projects.create');
     }
@@ -46,17 +46,20 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Project $project)
     {
-        //
+        // dd($request->all());
+        $data = $request->all(); //richiedo tutti i dati
+        $project->update($data); // modifico i dati del singolo animale attraverso il mio form con i value già presenti
+        return redirect()->route('admin.projects.show', $project)->with('message', $project->name . " Has Been Edited");
     }
 
     /**
