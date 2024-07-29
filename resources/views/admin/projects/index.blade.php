@@ -52,10 +52,13 @@
                 </article>
             </div>
         </div>
-        {{-- @dump($projects) --}}
 </main>
 
         {{-- //@dd($projects) --}}
     </div>
 </div>
+@endsection
+
+@section('custom-scripts')
+    @vite('resources/js/delete-confirm.js')
 @endsection
