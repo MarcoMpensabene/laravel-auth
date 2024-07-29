@@ -28,5 +28,6 @@ Route::get('/home', [GuestHomeController::class, 'index'])->name('home');
 Route::middleware('auth')->name('admin.')->prefix('admin/')->group(
     function () {
         Route::resource('projects', ProjectController::class);
+        Route::delete('/admin/projects/{project}', [ProjectController::class, "destroy"])->name('admin.project.destroy');
     }
 );
