@@ -54,10 +54,6 @@
                 </article>
             </div>
         </div>
-        {{-- @dump($projects) --}}
-</main>
-
-        {{-- //@dd($projects) --}}
     </div>
 </div>
 @endsection
