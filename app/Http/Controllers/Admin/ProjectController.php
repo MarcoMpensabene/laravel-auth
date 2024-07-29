@@ -58,7 +58,7 @@ class ProjectController extends Controller
     {
         // dd($request->all());
         $data = $request->all(); //richiedo tutti i dati
-        $project->update($data); // modifico i dati del singolo animale attraverso il mio form con i value già presenti
+        $project->update($data); // modifico i dati del singolo Projecte attraverso il mio form con i value già presenti
         return redirect()->route('admin.projects.show', $project)->with('message', $project->name . " Has Been Edited");
     }
 
@@ -69,5 +69,25 @@ class ProjectController extends Controller
     {
         $project->delete();
         return redirect()->route('admin.projects.index')->with('message', "N:" . $project->id . " " . $project->name . " Has Been Deleted");
+    }
+
+    public function deletedIndex()
+    {
+        $projects = Project::onlyTrashed()->get();
+        return view('admin.projects.deleted-index', compact('projects'));
+    }
+
+    public function restore(string $id)
+    {
+        $project = Project::onlyTrashed()->findOrFail($id);
+        $project->restore();
+        return redirect()->route('admin.projects.deleted-index')->with('message', $project->name . " Has Been Restored");
+    }
+
+    public function permanentDelete(string $id)
+    {
+        $project = Project::onlyTrashed()->findOrFail($id);
+        $project->forceDelete();
+        return redirect()->route('admin.projects.deleted-index')->with('message', $project->name . " Has Been Permanently Removed");
     }
 }

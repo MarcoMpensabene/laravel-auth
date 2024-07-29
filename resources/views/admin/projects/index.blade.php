@@ -7,6 +7,11 @@
         <div class="container">
             <div class="row">
                 <article class="col-12">
+                    @if (session("message"))
+                        <div class="alert alert-danger">
+                            {{session("message")}}
+                        </div>
+                    @endif
                     <table class="table align-middle table-striped table-hover">
                         <thead>
                             <tr>

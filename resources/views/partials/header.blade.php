@@ -26,6 +26,11 @@
                 @endif
 
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.projects.deleted-index') }}">{{ __('DeletedProjectIndex') }}</a>
+                </li>
+
+
             </ul>
 
             <!-- Right Side Of Navbar -->
