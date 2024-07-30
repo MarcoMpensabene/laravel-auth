@@ -17,7 +17,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">id</th>
-                                    <th scope="col">ProjectName</th>
+                                    <th scope="col">Projecttitle</th>
                                     <th scope="col">Desciption</th>
                                     <th scope="col">Author</th>
                                     <th scope="col">Image_url</th>
@@ -29,7 +29,7 @@
                             @foreach ($projects as $project)
                                 <tr>
                                     <th >{{$project->id}}</th>
-                                    <th >{{$project->name}}</th>
+                                    <th >{{$project->title}}</th>
                                     <th >{{$project->description}}</th>
                                     <th >{{$project->author}}</th>
                                     <th >{{$project->image_url}}</th>

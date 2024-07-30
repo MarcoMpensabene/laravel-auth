@@ -10,12 +10,12 @@
                     <article class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">{{$project->name}}</h5>
-                                <p class="card-text">{{$project->description}}</p>
-                                <p class="card-text"><small class="text-body-secondary">{{$project->author}}</small></p>
-                                <p class="card-text">{{$project->stack}}</p>
+                                <h5 class="card-title">Project : {{$project->title}}</h5>
+                                <p class="card-text">Description : {{$project->description}}</p>
+                                <p class="card-text"><small class="text-body-secondary">Autore : {{$project->author}}</small></p>
+                                <p class="card-text">Stack : {{$project->stack}}</p>
                             </div>
-                            <img src="{{$project->image_url}}" class="card-img-bottom object-fit-cover" style="height: 30rem"  alt="{{$project->name}}">
+                            <img src="{{$project->image_url}}" class="card-img-bottom object-fit-cover" style="height: 30rem"  alt="{{$project->title}}">
                         </div>
                     </article>
                 </div>
